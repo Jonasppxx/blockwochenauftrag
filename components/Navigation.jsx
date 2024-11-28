@@ -4,14 +4,14 @@ import Link from 'next/link';
 
 const Navigation = ({ activeSection }) => {
   const sectionLabels = {
-    section1: 'Spielzeuge',
+    section1: 'Spielzeug',
     section2: 'Ausbildung',
-    section3: 'Geschichtsvideo',
+    section3: 'Über Jutta',
   };
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white shadow-md py-4 z-10">
-      <ul className="flex justify-center space-x-8">
+      <ul className="flex justify-center space-x-4"> {/* Geänderte Klasse von space-x-8 zu space-x-4 */}
         {['section1', 'section2', 'section3'].map((section) => (
           <li key={section} className="relative">
             <Link
