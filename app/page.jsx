@@ -1,51 +1,19 @@
 // app/page.jsx
 'use client';
-import { useState, useEffect } from 'react';
-import Layout from './layout.jsx'; // Updated import path
+import 'tailwindcss/tailwind.css';
 
 export default function Home() {
-  const [activeSection, setActiveSection] = useState('section1');
-
-  useEffect(() => {
-    // Create an intersection observer to track which section is in view
-    const sections = document.querySelectorAll('section');
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.6, // Section is considered in view when 60% visible
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    }, options);
-
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-
-    // Cleanup observer when component unmounts
-    return () => {
-      sections.forEach((section) => {
-        observer.unobserve(section);
-      });
-    };
-  }, []);
-
   return (
-    <Layout activeSection={activeSection}>
+    <>
       <section id="section1" className="min-h-screen w-full p-8 bg-gray-100">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-6">Section 1</h2>
           <div className="space-y-4">
             <p className="text-lg">
-              You are currently viewing: <span className="font-bold">{activeSection}</span>
+              You are currently viewing: <span className="font-bold">Section 1</span>
             </p>
             <p className="text-lg">
-              This is the first section. Scroll down to see how the active section updates.
+              Dies ist der Inhalt der ersten Sektion. Scrollen Sie weiter, um zu sehen, wie die aktive Sektion aktualisiert wird.
             </p>
           </div>
         </div>
@@ -56,10 +24,10 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-6">Section 2</h2>
           <div className="space-y-4">
             <p className="text-lg">
-              You are currently viewing: <span className="font-bold">{activeSection}</span>
+              You are currently viewing: <span className="font-bold">Section 2</span>
             </p>
             <p className="text-lg">
-              This is the second section. Notice how the navigation highlights change as you scroll.
+              Dies ist der Inhalt der zweiten Sektion. Beachten Sie, wie die Navigation beim Scrollen die aktive Sektion hervorhebt.
             </p>
           </div>
         </div>
@@ -70,14 +38,14 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-6">Section 3</h2>
           <div className="space-y-4">
             <p className="text-lg">
-              You are currently viewing: <span className="font-bold">{activeSection}</span>
+              You are currently viewing: <span className="font-bold">Section 3</span>
             </p>
             <p className="text-lg">
-              This is the third section. The active section is tracked as you scroll.
+              Dies ist der Inhalt der dritten Sektion. Die aktive Sektion wird beim Scrollen verfolgt.
             </p>
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 }

@@ -4,25 +4,50 @@ import Link from 'next/link';
 
 const Navigation = ({ activeSection }) => {
   return (
-    <nav className="flex justify-center items-center w-full">
-      <ul className="flex gap-8">
-        {['section1', 'section2', 'section3'].map((section) => (
-          <li key={section}>
+    <nav className="container mx-auto px-4">
+      <div className="flex justify-between items-center">
+        <ul className="flex space-x-6">
+          <li>
             <Link
-              href={`#${section}`}
-              className={`px-3 py-2 transition-all duration-300 relative
-                ${activeSection === section ? 'font-semibold' : ''}
-              `}
+              href="#section1"
+              className={`px-3 py-2 transition-all ${
+                activeSection === 'section1'
+                  ? 'border-b-2 border-blue-500 font-bold'
+                  : 'hover:border-b-2 hover:border-blue-500'
+              }`}
             >
-              {`Section ${section.slice(-1)}`}
-              <span 
-                className={`absolute bottom-0 left-0 w-full h-0.5 bg-blue-500 transform transition-transform duration-300 
-                ${activeSection === section ? 'scale-x-100' : 'scale-x-0'}`}
-              />
+              Section 1
             </Link>
           </li>
-        ))}
-      </ul>
+          <li>
+            <Link
+              href="#section2"
+              className={`px-3 py-2 transition-all ${
+                activeSection === 'section2'
+                  ? 'border-b-2 border-blue-500 font-bold'
+                  : 'hover:border-b-2 hover:border-blue-500'
+              }`}
+            >
+              Section 2
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="#section3"
+              className={`px-3 py-2 transition-all ${
+                activeSection === 'section3'
+                  ? 'border-b-2 border-blue-500 font-bold'
+                  : 'hover:border-b-2 hover:border-blue-500'
+              }`}
+            >
+              Section 3
+            </Link>
+          </li>
+        </ul>
+        <span className="text-sm text-gray-600">
+          Aktuelle Section: {activeSection?.replace('section', 'Section ') || 'Keine'}
+        </span>
+      </div>
     </nav>
   );
 };

@@ -1,6 +1,6 @@
 // app/layout.jsx
-import './globals.css';  // Updated import path
-import ClientLayout from '../components/ClientLayout.jsx';
+import './globals.css';  // Korrekte Pfadangabe
+import ClientLayout from '../components/ClientLayout.jsx'; // Korrigierter Pfad
 
 export default function RootLayout({ children }) {
   return (
