@@ -3,6 +3,12 @@
 import Link from 'next/link';
 
 const Navigation = ({ activeSection }) => {
+  const sectionLabels = {
+    section1: 'Spielzeuge',
+    section2: 'Ausbildung',
+    section3: 'Geschichtsvideo',
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white shadow-md py-4 z-10">
       <ul className="flex justify-center space-x-8">
@@ -20,7 +26,7 @@ const Navigation = ({ activeSection }) => {
                 ${activeSection === section ? 'text-gray-900' : ''}
               `}
             >
-              {`Section ${section.slice(-1)}`}
+              {sectionLabels[section]}
             </Link>
             {/* Unterstreichung */}
             <span 
