@@ -83,7 +83,7 @@ export default function Home() {
       {/* Section 3 */}
       <section id="section3" className="w-full py-20 px-8 bg-[#BFBFBF]">
         <div className="max-w-4xl mx-auto">
-          {/* Überschrift und Text nur auf größeren Bildschirmen anzeigen */}
+          {/* Überschrift und Text auf größeren Bildschirmen anzeigen */}
           <h2 className="text-4xl font-bold mb-6 hidden md:block">Geschichtsvideo</h2>
           <p className="mb-4 text-lg leading-relaxed hidden md:block">
             Ihr Name ist Jutta Glück. Jutta ist 1940 geboren. Sie wuchs in Deutschland auf und lebte seitdem in Deutschland. Sie lernte Verkaufsfrau und übte den Beruf ihr Leben lang aus.
@@ -94,7 +94,10 @@ export default function Home() {
               autoPlay 
               loop 
               muted 
-              className="w-full" // Entfernt die Umrandung
+              className="w-full h-full object-cover" // Optimierte Klassen für responsives Design
+              playsInline // Ermöglicht das Abspielen auf Mobilgeräten ohne Vollbild
+              controls // Optional: Zeigt die Steuerungselemente an
+              aria-label="Geschichtsvideo von Jutta Glück" // Barrierefreiheit
             >
               <source src="/Geschichtsvideo.mp4" type="video/mp4" />
               Ihr Browser unterstützt das Video-Element nicht.
