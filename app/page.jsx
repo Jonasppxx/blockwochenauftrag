@@ -7,44 +7,63 @@ export default function Home() {
     <>
       <section id="section1" className="min-h-screen w-full p-8 bg-gray-100">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-6">Section 1</h2>
-          <div className="space-y-4">
-            <p className="text-lg">
-              You are currently viewing: <span className="font-bold">Section 1</span>
-            </p>
-            <p className="text-lg">
-              Dies ist der Inhalt der ersten Sektion. Scrollen Sie weiter, um zu sehen, wie die aktive Sektion aktualisiert wird.
-            </p>
+          <h2 className="text-4xl font-bold mb-6">Spielzeuge</h2>
+          <div className="space-y-6">
+            <div className="prose max-w-none">
+              <p className="text-lg leading-relaxed">
+                Die Puppe von Jutta ist ein besonderes Stück, das uns eindrucksvoll zeigt, 
+                wie Kinder früher ihre Freizeit gestaltet haben. Früher spielten ausschliesslich 
+                Mädchen mit Puppen. Sie erzählte uns, dass Jungs, die mit Puppen spielen nicht 
+                gern gesehen wurden. Solche Rollenbilder waren klar vorgegeben. Stattdessen 
+                beschäftigten sich Jungen oft mit Ästen, bauten viele verschiedene Dinge zusammen 
+                oder liessen ihrer Kreativität auf andere Weise freien Lauf.
+              </p>
+            </div>
+            
+            <div className="mt-8">
+              <h3 className="text-2xl font-semibold mb-4">Interview zum Thema:</h3>
+              <div className="p-4 bg-white rounded-lg shadow">
+                <p className="mb-2 text-lg font-medium">Interview - Puppe</p>
+                <audio controls className="w-full">
+                  <source src="/puppe.mp3" type="audio/mpeg" />
+                  Ihr Browser unterstützt das Audio-Element nicht.
+                </audio>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="section2" className="min-h-screen w-full p-8 bg-gray-200">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-6">Section 2</h2>
-          <div className="space-y-4">
-            <p className="text-lg">
-              You are currently viewing: <span className="font-bold">Section 2</span>
-            </p>
-            <p className="text-lg">
-              Dies ist der Inhalt der zweiten Sektion. Beachten Sie, wie die Navigation beim Scrollen die aktive Sektion hervorhebt.
-            </p>
-          </div>
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-4xl font-bold mb-6">Ausbildung</h2>
+    <div className="space-y-6">
+      <div className="prose max-w-none">
+        <p className="text-lg leading-relaxed">
+          Die Mütze spielt eine grosse Rolle in Juttas Leben und ist mehr als nur ein Accessoire. 
+          Sie arbeitete als Verkäuferin in einem Detailhandelsladen und hatte täglich mit Mode 
+          und Kleidungsstücken zu tun, das war ihr Ding. Die Mütze stammt aus den 1950ern und 
+          gibt uns einen kleinen Einblick, wie der Stil in ihrer Zeit war. Sie ist nicht nur 
+          ein cooles Vintage-Teil, sondern erzählt auch ein Stück ihrer persönlichen Geschichte.
+        </p>
+      </div>
+      
+      <div className="mt-8">
+        <h3 className="text-2xl font-semibold mb-4">Interview zum Thema:</h3>
+        <div className="p-4 bg-white rounded-lg shadow">
+          <p className="mb-2 text-lg font-medium">Interview - Mütze</p>
+          <audio controls className="w-full">
+            <source src="/muetze.mp3" type="audio/mpeg" />
+            Ihr Browser unterstützt das Audio-Element nicht.
+          </audio>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section id="section3" className="min-h-screen w-full p-8 bg-gray-300">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-6">Section 3</h2>
-          <div className="space-y-4">
-            <p className="text-lg">
-              You are currently viewing: <span className="font-bold">Section 3</span>
-            </p>
-            <p className="text-lg">
-              Dies ist der Inhalt der dritten Sektion. Die aktive Sektion wird beim Scrollen verfolgt.
-            </p>
-          </div>
-        </div>
+        {/* ... */}
       </section>
     </>
   );
